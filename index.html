@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Amara Hecht</title>
+<meta name="description" content="Dressed with intention, and written down. The pieces worn and loved, notes from the shows, and the quiet art of getting dressed on purpose.">
+<link rel="canonical" href="https://amarahecht.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amara Hecht">
+<meta property="og:description" content="Dressed with intention, and written down.">
+<meta property="og:url" content="https://amarahecht.com/">
+<meta property="og:image" content="https://amarahecht.com/images/photo-01-d4fb6e4957.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>:root{color-scheme:light}html{scroll-padding-top:0}img{max-width:100%}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Tenor+Sans&display=swap">
+<style>
+/* Layout: pure white, black type, one hairline grey. Centered section heads in small uppercase sans, light serif headlines, photographs set wide with air around them. Single light look; no dark mode. */
+:root{
+  --bg:#FFFFFF;
+  --fg:#111111;
+  --ink:#2B2B2B;
+  --mute:#8A8A8A;
+  --line:#E6E6E6;
+  --frame:#F2F2F2;
+  --display:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --sans:"Tenor Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1240px;
+  --gutter:clamp(20px,6vw,110px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.75;-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:1px solid var(--fg);outline-offset:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+
+/* masthead */
+header.mast{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+.mast .wrap{display:flex;flex-direction:column;align-items:center;gap:18px;padding-block:26px 20px}
+.wordmark{font-family:var(--sans);font-size:15px;letter-spacing:.38em;text-transform:uppercase;color:var(--fg);padding-left:.38em}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:34px;flex-wrap:wrap;justify-content:center}
+nav a{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--fg);padding-bottom:3px;border-bottom:1px solid transparent}
+nav a:hover{border-bottom-color:var(--fg)}
+
+/* hero */
+.hero{padding-block:clamp(72px,11vw,160px) clamp(40px,6vw,90px);text-align:center}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(40px,6.4vw,92px);line-height:1.02;letter-spacing:-.005em;margin:0 auto;color:var(--fg);text-wrap:balance;max-width:18ch}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero p{max-width:46ch;margin:34px auto 0;font-size:14px;line-height:1.9;color:var(--ink)}
+.hero .place{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute);margin-top:40px}
+
+/* image frames */
+figure{margin:0}
+.ph{background:var(--frame);position:relative;overflow:hidden;max-width:100%}
+.ph::after{content:attr(data-note);position:absolute;inset:auto 16px 14px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.ph.portrait{aspect-ratio:4/5}
+.ph.landscape{aspect-ratio:16/9}
+.ph.tall{aspect-ratio:3/4}
+figcaption{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:16px;text-align:center}
+
+/* section */
+section{padding-block:clamp(72px,10vw,150px)}
+.head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;margin-bottom:clamp(48px,7vw,96px)}
+.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--fg)}
+.rule{height:1px;background:var(--fg);width:28px}
+h2{font-family:var(--display);font-weight:300;font-size:clamp(32px,4.4vw,58px);line-height:1.08;margin:0;color:var(--fg);text-wrap:balance;max-width:20ch}
+.lede{max-width:58ch;font-size:14px;line-height:1.9;margin:0}
+.prose{max-width:58ch}
+.prose p{margin:0 0 1.5em;font-size:14px;line-height:1.9}
+
+/* two-column with offset image */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,7vw,120px);align-items:center}
+.split.rev{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.split > *{min-width:0}
+.split .head{align-items:flex-start;text-align:left}
+@media (max-width:760px){.split,.split.rev{grid-template-columns:1fr}.split .head{align-items:center;text-align:center}}
+
+/* collection grid */
+.pieces{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(40px,5vw,72px) clamp(24px,3vw,48px)}
+.piece{text-align:center}
+.piece .name{font-family:var(--display);font-size:24px;color:var(--fg);margin:22px 0 6px;font-weight:400;line-height:1.2}
+.piece .meta{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.piece .note{margin:14px auto 0;font-size:13px;line-height:1.8;color:var(--ink);max-width:34ch}
+
+/* obsessions list */
+.obs{list-style:none;margin:0 auto;padding:0;display:grid;gap:0;max-width:880px}
+.obs li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 56px;padding-block:40px;border-top:1px solid var(--line)}
+.obs li:last-child{border-bottom:1px solid var(--line)}
+.obs li > *{min-width:0}
+.obs h3{font-family:var(--display);font-weight:300;font-size:28px;line-height:1.1;margin:0;color:var(--fg)}
+.obs p{margin:0;font-size:14px;line-height:1.85;max-width:56ch}
+@media (max-width:640px){.obs li{grid-template-columns:1fr}}
+
+/* journal */
+.entries{display:grid;gap:clamp(64px,9vw,128px);max-width:960px;margin:0 auto}
+.entry{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;justify-items:center;text-align:center}
+.entry > *{min-width:0;width:100%}
+.entry .date{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.entry h3{font-family:var(--display);font-weight:300;font-size:clamp(26px,3.2vw,38px);line-height:1.12;margin:0 0 22px;color:var(--fg);text-wrap:balance;max-width:22ch;margin-inline:auto}
+.entry figure{max-width:560px;margin-inline:auto}
+.entry .prose{margin-inline:auto;text-align:left}
+.entry .more{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--fg);display:inline-block;margin-top:8px;border-bottom:1px solid var(--fg);padding-bottom:3px}
+
+/* objects */
+.objects{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:44px 32px}
+.objects figcaption{text-transform:none;letter-spacing:.01em;font-family:var(--display);font-size:17px;color:var(--ink);margin-top:14px;line-height:1.45;text-align:center}
+
+/* about */
+.about .prose p{font-size:14px}
+.sig{font-family:var(--display);font-style:italic;font-size:30px;color:var(--fg);margin-top:28px}
+
+/* contact */
+.contact{padding-block:clamp(72px,10vw,140px) 90px;border-top:1px solid var(--line);text-align:center}
+.contact .wrap{display:grid;grid-template-columns:1fr;gap:40px;justify-items:center}
+.addr{font-family:var(--display);font-size:clamp(24px,3vw,36px);color:var(--fg);font-weight:300;word-break:break-all;user-select:all;margin-top:14px}
+.copy{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--fg);background:none;border:0;border-bottom:1px solid var(--fg);padding:3px 0;cursor:pointer;margin-top:14px}
+.copy:hover{color:var(--mute);border-bottom-color:var(--mute)}
+.colophon{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);line-height:2.2}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise 1s ease both}
+  .hero p,.hero .place{animation:rise 1s .15s ease both}
+  @keyframes rise{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Amara Hecht</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#collection">The Collection</a></li>
+        <li><a href="#obsessions">Obsessions</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#objects">Art &amp; Objects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Dressed with intention,<br><em>and written down.</em></h1>
+    <p>Most of a lifetime has been spent learning how to dress for the reality of daily living. Within these pages live the pieces worn and cherished, reflections on the art of each collection, and the quiet beauty of getting dressed on purpose. Written slowly, from the château in the high desert of the Pacific Northwest, with Paris never far from mind.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure>
+      <div class="ph landscape"><img src="images/photo-01-d4fb6e4957.jpg" alt="Amara in a trench on a Paris balcony with the Eiffel Tower behind"></div>
+      <figcaption>Paris, the first morning. Photograph by Emily Farthing.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">The Collection</div>
+      <div class="rule"></div>
+      <h2>The pieces worn most, and why they matter.</h2>
+      <p class="lede">Closets are less about storage and more about a slow accumulation of affection. Every piece here caught a quickened pulse once and became part of the rhythm of a day, carrying a story worth remembering. It begins with Chanel, courtesy of grandmother Katherine, and wanders into silk, suede, and the particular quiet of well-made things.</p>
+    </div>
+
+    <div class="pieces">
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-02-03e09111ac.jpg" alt="Brown quilted Chanel bag held against a trench coat"></div>
+        <div class="name">The brown Chanel</div>
+        <div class="meta">Chanel · Handbags</div>
+        <p class="note">A bag trusted with an entire day. It went over an Acne trench on that first grey morning in Paris, moving past the Eiffel Tower, a stone lion, and along the river, taking on character with every mile.</p>
+      </article>
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-03-b9bbbe090b.jpg" alt="Maroon Chanel bag with a Self-Portrait gown in the back of a car"></div>
+        <div class="name">The maroon Chanel</div>
+        <div class="meta">Chanel · Handbags</div>
+        <p class="note">An evening piece in the truest sense, scaled to hold little more than a lipstick and a hotel key. It accompanied a Self-Portrait gown to the Petit Palais, catching light from every chandelier like a framed painting.</p>
+      </article>
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-04-01954aa55f.jpg" alt="Black quilted Chanel bag, close"></div>
+        <div class="name">The quiet Chanel</div>
+        <div class="meta">Chanel · Handbags</div>
+        <p class="note">Black quilting with almost no hardware, letting silhouette and textile take center stage. Carried through the Louvre on a day when the light could not decide what it wanted, and it suited the museum and the mood exactly.</p>
+      </article>
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-05-3ae64f6600.jpg" alt="Black Zimmermann dress with full sleeves at the Louvre pyramid"></div>
+        <div class="name">The black Zimmermann</div>
+        <div class="meta">Zimmermann · Ready-to-wear</div>
+        <p class="note">A long-standing love for this house rests on pieces like this. The sleeves sculpt the air with every movement. Worn to the glass pyramid with Fendi heels, the look felt as though the city itself had composed it.</p>
+      </article>
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-06-1e84a27f73.jpg" alt="Black Celine bag laid out on a bed with lipsticks and a chain"></div>
+        <div class="name">The Celine with the mirror inside</div>
+        <div class="meta">Celine · Handbags</div>
+        <p class="note">Carried to the Celine show on a bright Saturday with the rest of the look from the same house. Sewn into the lining is a small mirror, a clever design detail that allows a quick glance in the back of a taxi without breaking composure.</p>
+      </article>
+      <article class="piece">
+        <div class="ph portrait"><img loading="lazy" src="images/photo-07-5172f1bbbb.jpg" alt="Red Chanel sunglasses with a trench coat, autumn trees behind"></div>
+        <div class="name">The red Chanel sunglasses</div>
+        <div class="meta">Chanel · Eyewear</div>
+        <p class="note">A steadfast accessory, worn daily and outlasting every pair before it. Against the falling leaves on that first Wednesday, the sharp color provided a painterly contrast to the muted Paris streets.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="obsessions">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Obsessions</div>
+      <div class="rule"></div>
+      <h2>The visual ideas that remain on the mind.</h2>
+    </div>
+    <ul class="obs">
+      <li>
+        <h3>Color and composition</h3>
+        <p>The best looks rely on an unexpected harmony between two colors. Ember set against soft ivory. Deep bottle green resting beside muted blush. A palette only proves itself when it shifts from a static concept into something that moves and breathes in daylight, on a body, in the open air. Everything else is a swatch.</p>
+      </li>
+      <li>
+        <h3>The art of the line</h3>
+        <p>Fashion at its highest level is moving sculpture. How a skirt falls, the balance of a shoulder, the way light catches a textured weave. These are what turn fabric into feeling, and they are decided long before the runway, on a worktable, by hands that are rarely photographed. The ateliers are the part of fashion week most worth seeing.</p>
+      </li>
+      <li>
+        <h3>Silk, specifically</h3>
+        <p>A few Zimmermann silks belong in every suitcase. They fold to almost nothing, forgive a long flight and a longer dinner, and offer a fluid movement that elevates any hour of travel. The subtle sheen and whisper of silk in motion never lose their magic.</p>
+      </li>
+      <li>
+        <h3>One look, three lives</h3>
+        <p>True design proves its worth through versatility. A single piece should move from morning light to an evening out to a day that goes somewhere unplanned. Anything limited to one performance feels more like a costume than art, and there is a difference in how a costume sits against the skin.</p>
+      </li>
+      <li>
+        <h3>Katherine's legacy</h3>
+        <p>Grandmother Katherine viewed style as a daily discipline, wearing a Chanel suit every day of her life and looking after everything she owned, each piece in its dust bag, each with a story she would tell if asked and sometimes if not. Her eye for proportion shaped everything that followed. Each selection made today remains, in some quiet way, a conversation with her.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure>
+      <div class="ph landscape"><img loading="lazy" src="images/photo-08-b5e55f0165.jpg" alt="Paris rooftops from a balcony, Eiffel Tower in the distance"></div>
+      <figcaption>Saturday morning, above the rooftops, before Celine.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Journal</div>
+      <div class="rule"></div>
+      <h2>Notes from the season.</h2>
+    </div>
+
+    <div class="entries">
+      <article class="entry">
+        <div class="date">Wednesday · Paris</div>
+        <div>
+          <figure><div class="ph portrait"><img loading="lazy" src="images/photo-09-b7eb1ebc96.jpg" alt="Under the painted ceiling of the Petit Palais"></div><figcaption>The Petit Palais, Wednesday evening.</figcaption></figure>
+          <h3>A trench, a brown bag, and the Petit Palais after dark</h3>
+          <div class="prose">
+            <p>The first full day in Paris calls for wandering without a map. An Acne Studios trench layered over simple lines, the brown Chanel across the body, the red sunglasses, and no plan at all. Paris rewards this kind of surrender. The trees along the river had just begun to turn, and the Eiffel Tower kept appearing at the ends of streets as if it were following along.</p>
+            <p>By evening the trench was back on its hanger and the mood shifted to pure drama on the steps of the Petit Palais. A shoulder-baring Self-Portrait gown that gathered light from every window it passed, the maroon Chanel bag that holds nothing and needs to hold nothing, gilded archways, and a sky going from gold to blue to something deeper. Nothing felt out of place. Only the calm that comes from being dressed exactly as intended.</p>
+          </div>
+          <a class="more" href="#journal">More photographs to come</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Wednesday, later · Paris</div>
+        <div>
+          <figure><div class="ph portrait"><img loading="lazy" src="images/photo-10-5734ab21c5.jpg" alt="Black dress in motion in front of the Louvre pyramid"></div><figcaption>The Louvre, in the rain.</figcaption></figure>
+          <h3>Zimmermann at the Louvre</h3>
+          <div class="prose">
+            <p>Fine, undecided rain over the Louvre courtyard only heightened the atmosphere. The black Zimmermann dress with its sculptural sleeves, Fendi heels braver than the weather, and the quiet Chanel bag because the dress had already said everything. The crowds thinned, the glass pyramid took on the color of the sky, and for once the camera was welcome.</p>
+            <p>Zimmermann has been the house worn most for years now, mostly silk, mostly for travel. This dress is the whole argument in one piece, proof that true style thrives in any weather.</p>
+          </div>
+          <a class="more" href="#journal">More photographs to come</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Thursday · Chloé, Spring Summer 2027</div>
+        <div>
+          <h3>Softness and structure at Chloé</h3>
+          <div class="prose">
+            <p>Chloé is the house that comes to mind first when thinking of the girls, all softness and movement and the feeling of a dress one can run in. Thursday's show was watched with a mother's eyes as much as a collector's.</p>
+            <p>Chemena Kamali's fifth collection focused on refined simplicity after a year of a great deal of everything. She built it around the trench, taken apart and rebuilt in more ways than a single seat could count. A cape with the sleeves gone. A cropped cut stopping at the ribs. A scoop neck that read almost as a dress. Leather. And then vinyl, a true raincoat, cut with the same ease as the cotton beside it so that it never felt like outerwear at all. Vinyl wants to stand away from the body. These did not. Watching the hems and working out how the weight had been managed was the real pleasure of the afternoon. Someone in that atelier solved a difficult problem and made it look like nothing.</p>
+            <p>Beneath, the romance. Broderie anglaise in tiers and panels, the eyelets cut small and close so the fabric kept its drape, with sheer lace layered under it where least expected. Balloon skirts. Blouses laced up the front with a cord that looked hand-finished. Nearly all of it in black and white, which let the construction show, with the occasional breath of dusty pink or butter yellow and one dress in a red so bright it felt like a decision. Rain hats to the waist, sun hats that flopped, flats laced at the ankle. The whole thing captured an effortless French romanticism, a girl who has resolved to be sensible and failed charmingly. There is talk this may have been Chemena's last collection for the house, which one hopes is not true.</p>
+          </div>
+          <a class="more" href="https://www.chloe.com/us/chloe/runway" target="_blank" rel="noopener">View the collection at Chloé</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Saturday · Celine, Spring Summer 2027</div>
+        <div>
+          <figure><div class="ph portrait"><img loading="lazy" src="images/photo-11-ad51757d4a.jpg" alt="Fringed suede jacket and black bag in the street before the Celine show"></div><figcaption>Saturday, in the street, before the show.</figcaption></figure>
+          <h3>Celine and the theater of the runway</h3>
+          <div class="prose">
+            <p>Saturday centered on Celine's distinct point of view, and on wearing it from the ground up. The invitation had arrived at the hotel in an envelope too beautiful to throw away. A fringed suede jacket that swung with each step, denim, and the bag with the mirror sewn into its lining. A glance at the lipstick in the back of the car, without breaking composure, and a rush of affection for whoever at the house had thought of it.</p>
+            <p>This was Michael Rider's second season. The show opened with a voice from Paris Is Burning observing that everybody wants to make some mark on the world, and that perhaps one has, simply by getting through it. The models walked under a thatched canopy in a room that felt like late summer. Creams, whites, the colors of unbleached linen. Collarless leather coats that fell like capes, knits layered thin as paper, fluid tailoring slouched and cinched at the ankle, and then one vivid tomato red top with trousers tied at the waist that made the whole room sit up. A floor-length dress patterned like a sundial has not left the mind since. Rider seems to believe clothes should not try too hard, and watching them move made the idea obvious. They struck a balance between effortless ease and high artistic vision, and looked like belonging rather than effort.</p>
+            <p>Back in the room, a handwritten note from the house, welcoming a guest to Paris. Read twice, then once more sitting on the bed. A reply has gone out. Some gestures stay, and this is one worth deserving.</p>
+          </div>
+          <a class="more" href="https://www.celine.com/en-us/celine-shows/" target="_blank" rel="noopener">View the collection at Celine</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Sunday · Miu Miu, Spring Summer 2027</div>
+        <div>
+          <figure><div class="ph portrait"><img loading="lazy" src="images/photo-12-088df392b1.jpg" alt="Walking in a suede coat and pink bag outside the hotel"></div><figcaption>Sunday, outside the hotel.</figcaption></figure>
+          <h3>Playful geometry at Miu Miu</h3>
+          <div class="prose">
+            <p>Sunday was Miu Miu, worn the way the house intends, which is to say completely and without apology. Tissue paper everywhere on waking, and the particular happiness of getting dressed in something made to be a little mischievous. A suede coat over argyle, the tinted glasses, a bag the color of the inside of a shell. Walking out of the hotel felt like being nineteen, which is presumably the point.</p>
+            <p>Miuccia Prada turned the runway into a study of high-low contrasts, and said afterward that she had wanted to find ways to bring beauty into real clothes. The precision showed. The layering carried a retro cast that took a moment to place, somewhere between a 1970s schoolgirl and a 1990s one. Jersey tops with scooped necks crusted in crystal beneath boxy tweed jackets cut almost square, over pleated skirts. Vintage Wrangler jeans taken apart at the seams and put back together with the grain running the wrong way on purpose. Cocktail dresses built on the bodice of a sports bra and layered over long sleeves, and everywhere the zig-zag lacing borrowed from a running shoe, climbing the side of a skirt like a drawing of itself. The models wore New Balance. It should have been strange and instead it was the most alive room of the week, every look a collage to take apart with the eyes and reassemble differently. A reminder that fashion should feel alive and expressive.</p>
+          </div>
+          <a class="more" href="https://www.miumiu.com/" target="_blank" rel="noopener">View the collection at Miu Miu</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Monday · Chanel, Spring Summer 2027</div>
+        <div>
+          <figure><div class="ph portrait"><img loading="lazy" src="images/photo-13-68de0b9252.jpg" alt="Feathered black Chanel dress from behind, black and white"></div><figcaption>Monday, head to toe.</figcaption></figure>
+          <h3>Chanel and the many lives of Gabrielle</h3>
+          <div class="prose">
+            <p>The Grand Palais held an overhead migration of orange-billed birds, nearly a hundred of them, carrying an atmosphere of soaring freedom through the space. An illuminated moon the size of a house. A floor of colored glass, so the models walked on their own reflections and the whole vast room glowed from beneath. Over the soundtrack, Nicole Kidman's voice read from Orlando and To the Lighthouse, framing Matthieu Blazy's third collection around the evolution of Gabrielle Chanel's own story, from the corsetry she was born into to the freedom she cut her way toward.</p>
+            <p>The design narrative traced that arc. It began with subtle traces of Edwardian corsetry, boning and peplums and ruffled collars, henley-style silk knits, and vibrant Vuillard-inspired knitwear. It evolved gracefully into raw-edged tailoring, masculine cutaway coats, Charvet indigo blouses, and pencil-skirt suits that looked borrowed from a man and improved. Tweed throughout, and one of them smocked, a groundbreaking fabric developed to stretch and move with total fluidity, which occupied the rest of the show. Tiger-print tweed. Sheer skirt suits with the lining showing through. Pearl embroidery, beadwork, sequins laid so densely they read as cloth, and birds everywhere once one started looking, in the buttons, in the jewelry, in the lift of a collar. The 1930s gowns were styled as if they were nothing special, which is the most Chanel idea of all. The founder's original 2.55 handbag opened and closed the show, back from the archive as though it had never left. The knee-length skirt returned in a way that was not expected to be wanted and now, somehow, cannot be stopped wanting. The creativity in that room was jaw-dropping.</p>
+            <p>Then the finale dissolved into pure celebration as Britney Spears echoed through the room, Gimme More, and the front row, Kidman and Dua Lipa among them, danced in their seats. Wearing Chanel from head to toe, a black dress flecked with tiny points of white, felt less like dressing up than like participating in a living piece of modern art, a little nervous and very grateful to be let in. A card from the house was waiting back in the room, with a private line. A reply has gone out. From now on, this is to be done properly.</p>
+          </div>
+          <a class="more" href="https://www.chanel.com/us/fashion/collection/spring-summer-2027/" target="_blank" rel="noopener">View the collection at Chanel</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">Paris · October</div>
+        <div>
+          <h3>Maison Massaro and bespoke form</h3>
+          <div class="prose">
+            <p>Of everything that happened in Paris, this is the afternoon that keeps returning. An invitation to Maison Massaro, the bootmaker Chanel holds the way other houses hold a secret, and the slightly dizzy feeling of standing inside a place read about for years.</p>
+            <p>Massaro has made shoes by hand since 1894, first at 2 rue de la Paix, where the clients included Barbara Hutton, Elizabeth Taylor and Romy Schneider, and where a young Raymond Massaro, grandson of an Italian immigrant, began his apprenticeship in 1947. Ten years later Gabrielle Chanel came to him with a problem. She wanted a shoe that would lengthen the leg and make the foot look smaller, with an open back so a woman could actually walk, in a season when everyone else was teetering onto stilettos. He gave her a modest six-centimetre heel, a beige kidskin upper, and a black satin toe to hide the scuffs and shorten the foot. That is the two-tone slingback, worn by her for the rest of her life and, by most women who love the house, without ever quite knowing its story. Chanel brought the maison into its family in 2002, and the ateliers now sit among the other métiers d'art, where the craft is protected rather than simply used. Seeing that heritage up close highlighted how thoughtful proportions create timeless style.</p>
+            <p>A bespoke pair begins with a last, a wooden form carved to one foot and no other, and passes through four pairs of hands. The last-maker, the clicker who cuts the leather, the closer who stitches the upper, and the assembler who draws it together over the form. Thirty hours or so of patient work for a single woman's shoe. Feet measured and traced and discussed at length by people who have spent their lives thinking about feet, which is a strange and lovely thing to witness. A leather chosen, a shape chosen, and then questions about how one walks that no one had ever thought to ask. Not knowing the answers, it turned out, was the point.</p>
+            <p>What it felt like, unexpectedly, was something close to being seen. Having a last carved to one's own dimensions is a small thing in the world and an enormous thing to the person it is made for. When the shoes arrive there will be photographs. For now, still a little stunned, and very honored, to have been in that room at all.</p>
+          </div>
+          <a class="more" href="#journal">The shoes, when they arrive</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">October · From the lookbook</div>
+        <div>
+          <h3>Zimmermann, Spring Summer 2027, and what would be worn</h3>
+          <div class="prose">
+            <p>Not a review, since the seat was not there to be sat in. A wish list instead, written the way clothes are actually thought about, with a place and a season attached to each piece. Six looks, and for each the day in the year it would belong to. Tokyo in the spring, when the light is pale and everything feels new. Paris again for the fall shows. And the long high desert summer that begins in May and ends only when the aspens turn and the mornings start to bite.</p>
+            <p>The silk, as always, is the point. A printed midi with a dropped waist that will fold to the size of a scarf and still look like an occasion, and a pale set, a top and a trouser, that would go from the airport straight through to dinner without changing a thing. This house does that better than anyone and has for all the years it has been quietly, happily worn.</p>
+          </div>
+          <a class="more" href="https://www.zimmermann.com/" target="_blank" rel="noopener">View the collection at Zimmermann</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="date">September · The Château</div>
+        <div>
+          <h3>The Packing Edit, or a few silks and a tweed</h3>
+          <div class="prose">
+            <p>Packed the same way every time, and at peace with it. A few silks, one good jacket, the slingbacks, the pearls, and then whatever the weather insists on. The suitcase closes without a fight, the outfits multiply in ways that still surprise, and the whole trip is spent thinking about the city rather than the closet left behind. That freedom took years to find and would not be traded for anything.</p>
+          </div>
+          <a class="more" href="#journal">The full list to come</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="objects">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Art &amp; Objects</div>
+      <div class="rule"></div>
+      <h2>Lived with, looked at daily.</h2>
+      <p class="lede">None of it was chosen to match anything. A few of these things are here simply because they are looked at every day, and they make the day better.</p>
+    </div>
+    <div class="objects">
+      <figure>
+        <div class="ph tall"><img loading="lazy" src="images/photo-14-1b20e1582c.jpg" alt="A handwritten note from Celine held in two hands"></div>
+        <figcaption>The note from Celine, found on the bed. The envelope stayed, and so did the note.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph tall"><img loading="lazy" src="images/photo-15-164894397e.jpg" alt="Three pink Miu Miu boxes with tissue paper"></div>
+        <figcaption>Sunday morning, before anything had been opened.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph tall"><img loading="lazy" src="images/photo-16-fa8c82ff92.jpg" alt="Standing with her back to a large dark painting"></div>
+        <figcaption>Back to a painting at the Petit Palais, the preferred way to be photographed in a museum. The art should win.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph tall"><img loading="lazy" src="images/photo-17-3e6dcbb167.jpg" alt="Celine shopping bag and a floral bag on a white bed"></div>
+        <figcaption>What a Celine bag holds on a show day, two lipsticks, a gloss, a chain, and a mirror sewn into the lining.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap split rev">
+    <div>
+      <div class="head">
+        <div class="eyebrow">About</div>
+        <div class="rule"></div>
+        <h2>Amara Hecht</h2>
+      </div>
+      <div class="prose">
+        <p>I was raised on Maui, the youngest of five, with the last years of school in Ojai, California, before studying fashion at FIDM in Los Angeles. Long before I had opinions of my own, my mother and my aunt dressed me beautifully, and my grandmother Katherine wore a Chanel suit every single day of her life. I inherited the habit, and all of the longing, and I am still trying to be worthy of both.</p>
+        <p>Chanel has been a constant for most of adult life, and Zimmermann for the last several years, mostly silk, mostly for travel. This October brought the Spring Summer 2027 shows in Paris, and a homecoming changed in ways still being worked out.</p>
+        <p>Today, life is centered at the château in the Pacific Northwest, balancing daughters, a great many animals, and a closet considerably better organized than the rest of the house. The aim is to slow down, to buy less and better, and to write down why. This is where that happens.</p>
+        <div class="sig">Amara</div>
+      </div>
+    </div>
+    <figure>
+      <div class="ph portrait"><img loading="lazy" src="images/photo-18-51304fa657.jpg" alt="Seated beneath a painting in a sparkling off-shoulder Self-Portrait gown"></div>
+      <figcaption>Photograph by Emily Farthing.</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Correspondence</div>
+      <div class="addr" id="addr">amara@amarahecht.com</div>
+      <button class="copy" id="copyBtn" type="button">Copy address</button>
+    </div>
+    <div class="colophon">Amara Hecht · Pacific Northwest<br>Photographs by Emily Farthing<br>No affiliate links. Nothing here is for sale.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copyBtn'),a=document.getElementById('addr');
+  if(!b)return;
+  b.addEventListener('click',function(){
+    var t=a.textContent.trim();
+    function sel(){var r=document.createRange();r.selectNodeContents(a);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1800)},sel);
+    }else{sel()}
+  });
+})();
+</script>
+</body>
+</html>
